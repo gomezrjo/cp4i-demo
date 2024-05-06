@@ -1,0 +1,11 @@
+apiVersion: integration.ibm.com/v1beta1
+kind: PlatformNavigator
+metadata:
+  name: cp4i-navigator
+  namespace: tools
+spec:
+  license:
+    accept: true
+    license: L-VTPK-22YZPK
+  replicas: 3
+  version: 2023.4.1
