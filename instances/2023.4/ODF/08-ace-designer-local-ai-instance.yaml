@@ -1,0 +1,37 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: DesignerAuthoring
+metadata:
+  labels:
+    backup.appconnect.ibm.com/component: designerauthoring
+  name: ace-designer-ai
+  namespace: tools
+spec:
+  authentication:
+    integrationKeycloak:
+      enabled: true
+  authorization:
+    integrationKeycloak:
+      enabled: true
+  couchdb:
+    replicas: 1
+    storage:
+      size: 10Gi
+      type: persistent-claim
+      class: ocs-storagecluster-ceph-rbd
+  designerFlowsOperationMode: local
+  designerMappingAssist:
+    enabled: true
+    incrementalLearning:
+      schedule: Every 15 days
+      useIncrementalLearning: true
+      storage:
+        type: persistent-claim
+        class: ocs-storagecluster-cephfs
+  license:
+    accept: true
+    license: L-KZVS-2G3FW4
+    use: CloudPakForIntegrationNonProduction
+  replicas: 1
+  switchServer:
+    name: ace-switch-server
+  version: '12.0'
