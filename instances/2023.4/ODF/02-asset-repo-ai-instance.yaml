@@ -1,0 +1,22 @@
+apiVersion: integration.ibm.com/v1beta1
+kind: AssetRepository
+metadata:
+  labels:
+    backup.integration.ibm.com/component: assetrepository
+  name: asset-repo-ai
+  namespace: tools
+spec:
+  designerAIFeatures:
+    enabled: true
+  license:
+    accept: true
+    license: L-VTPK-22YZPK
+  replicas: 1
+  singleReplicaOnly: true
+  storage:
+    assetDataVolume:
+      class: ocs-storagecluster-ceph-rbd
+      size: 100Mi
+    couchVolume:
+      class: ocs-storagecluster-ceph-rbd
+  version: 2023.4.1
