@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: ibm-integration-asset-repository
+  namespace: openshift-operators
+spec:
+  channel: v1.6
+  name: ibm-integration-asset-repository
+  source: ibm-integration-asset-repository-catalog
+  sourceNamespace: openshift-marketplace
