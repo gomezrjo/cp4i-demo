@@ -1,0 +1,50 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  name: qmgr-demo
+  namespace: tools
+  labels:
+    assembly.integration.ibm.com/tools.jgr-demo: 'true'
+spec:
+  annotations:
+    productMetric: FREE
+  license:
+    accept: true
+    license: L-VTPK-22YZPK
+    use: NonProduction
+  pki:
+    keys:
+      - name: default
+        secret:
+          secretName: mq-demo-tls-secret
+          items: 
+          - tls.key
+          - tls.crt
+  queueManager:
+    name: QMGRDEMO
+    resources:
+      limits:
+        cpu: 500m
+      requests:
+        cpu: 500m
+    storage:
+      queueManager:
+        type: persistent-claim
+      defaultClass: ocs-storagecluster-ceph-rbd
+    availability:
+      type: SingleInstance
+    mqsc:
+      - configMap:
+          name: mq-demo-mqsc
+          items:
+            - mq-demo-resources.mqsc
+  version: 9.3.5.1-r1
+  web:
+    console:
+      authentication:
+        provider: integration-keycloak
+      authorization:
+        provider: integration-keycloak
+    enabled: true
