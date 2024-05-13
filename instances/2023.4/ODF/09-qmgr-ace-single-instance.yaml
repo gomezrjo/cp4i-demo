@@ -40,7 +40,7 @@ spec:
           name: mq-demo-mqsc
           items:
             - mq-demo-resources.mqsc
-  version: 9.3.5.1-r1
+  version: 9.3.5.0-r1
   web:
     console:
       authentication:
