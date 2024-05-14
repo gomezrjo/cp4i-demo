@@ -1,0 +1,18 @@
+From: CP4I Admin <cp4i-admin@ibm.com>
+To: Mailtrap Inbox <cp4i-user@ibm.com>
+Subject: Queue Manager hasn't been deployed yet!
+Content-Type: multipart/alternative; boundary="boundary-string"
+
+--boundary-string
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Something is wrong!
+
+Inspect the Queue Manager status.
+Take corrective actions to complete the deployment.
+
+Good luck! 
+
+--boundary-string

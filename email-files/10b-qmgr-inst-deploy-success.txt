@@ -1,0 +1,18 @@
+From: CP4I Admin <cp4i-admin@ibm.com>
+To: Mailtrap Inbox <cp4i-user@ibm.com>
+Subject: Queue Manager has been deployed!
+Content-Type: multipart/alternative; boundary="boundary-string"
+
+--boundary-string
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Congrats Queue Manager has been deployed.
+
+Inspect it using the commands provided in the repo.
+Now you can proceed to deploy the rest of the ACE Integration Servers.
+
+Good luck! 
+
+--boundary-string
