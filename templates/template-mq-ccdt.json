@@ -1,0 +1,24 @@
+{
+    "channel":
+    [
+        {
+            "name": "EXTAPP.TO.MQ",
+            "clientConnection":
+            {
+                "connection":
+                [
+                    {
+                        "host": "${QMGR_HOST}",
+                        "port": 443
+                    }
+                ],
+                "queueManager": "QMGRDEMO"
+            },
+            "transmissionSecurity":
+            {
+              "cipherSpecification": "ECDHE_RSA_AES_128_CBC_SHA256"
+            },
+            "type": "clientConnection"
+        }
+   ]
+}
